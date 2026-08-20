@@ -1,0 +1,59 @@
+{
+  "name": "pi-vercel-ai-gateway",
+  "version": "1.2.0",
+  "description": "Vercel AI Gateway provider for Pi with explicit routing, native streaming, prompt caching, and live pricing",
+  "author": "Kushal Khemka",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Kushalkhemka/pi-vercel-ai-gateway.git"
+  },
+  "homepage": "https://github.com/Kushalkhemka/pi-vercel-ai-gateway#readme",
+  "bugs": {
+    "url": "https://github.com/Kushalkhemka/pi-vercel-ai-gateway/issues"
+  },
+  "type": "module",
+  "files": [
+    "src",
+    "README.md",
+    "LICENSE"
+  ],
+  "pi": {
+    "extensions": [
+      "./src/index.ts"
+    ]
+  },
+  "scripts": {
+    "check": "tsc --noEmit",
+    "test": "node --import tsx --test src/*.test.ts",
+    "prepublishOnly": "npm run check && npm test"
+  },
+  "dependencies": {
+    "@ai-sdk/gateway": "^3.0.0",
+    "ai": "^6.0.0"
+  },
+  "devDependencies": {
+    "@earendil-works/pi-ai": "0.82.1",
+    "@earendil-works/pi-coding-agent": "0.82.1",
+    "@types/node": "^24.0.0",
+    "tsx": "^4.20.0",
+    "typescript": "^5.9.0"
+  },
+  "overrides": {
+    "undici": "8.9.0"
+  },
+  "engines": {
+    "node": ">=20"
+  },
+  "keywords": [
+    "pi-package",
+    "pi-coding-agent",
+    "vercel-ai-gateway",
+    "explicit-routing",
+    "prompt-caching",
+    "llm-gateway"
+  ],
+  "publishConfig": {
+    "access": "public"
+  },
+  "license": "MIT"
+}
