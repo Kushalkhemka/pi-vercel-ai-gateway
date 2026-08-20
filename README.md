@@ -40,7 +40,13 @@ of silently moving to another provider.
 
 ## Installation
 
-Install directly from GitHub:
+Install from the Pi package catalog/npm:
+
+```bash
+pi install npm:pi-vercel-ai-gateway
+```
+
+Alternatively, install the latest source directly from GitHub:
 
 ```bash
 pi install git:github.com/Kushalkhemka/pi-vercel-ai-gateway
@@ -116,8 +122,11 @@ provider name and `/login` entry while adding explicit endpoint choices.
 Removing the package restores Pi's built-in implementation:
 
 ```bash
-pi remove git:github.com/Kushalkhemka/pi-vercel-ai-gateway
+pi remove npm:pi-vercel-ai-gateway
 ```
+
+If you installed the GitHub source, remove it with
+`pi remove git:github.com/Kushalkhemka/pi-vercel-ai-gateway` instead.
 
 ## Development
 
