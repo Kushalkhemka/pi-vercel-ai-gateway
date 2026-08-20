@@ -1,6 +1,6 @@
 {
   "name": "pi-vercel-ai-gateway",
-  "version": "1.2.0",
+  "version": "1.2.1",
   "description": "Vercel AI Gateway provider for Pi with explicit routing, native streaming, prompt caching, and live pricing",
   "author": "Kushal Khemka",
   "repository": {
@@ -29,11 +29,17 @@
   },
   "dependencies": {
     "@ai-sdk/gateway": "^3.0.0",
-    "ai": "^6.0.0"
+    "@earendil-works/pi-ai": "^0.82.1",
+    "ai": "^6.0.0",
+    "zod": "^4.1.8"
   },
   "peerDependencies": {
-    "@earendil-works/pi-ai": "*",
     "@earendil-works/pi-coding-agent": "*"
+  },
+  "peerDependenciesMeta": {
+    "@earendil-works/pi-coding-agent": {
+      "optional": true
+    }
   },
   "devDependencies": {
     "@earendil-works/pi-ai": "0.82.1",
